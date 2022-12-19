@@ -22,7 +22,7 @@ export class formData {
     cy.get(this.date_departure).click({ force: true }).type(departure);
   }
 
-  dataChoce(amount, variant) {
+  dataChoice(amount, variant) {
     cy.get(this.input_amount).click({ force: true }).type(amount);
     cy.get(this.input_select_variant).select(variant);
   }
