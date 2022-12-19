@@ -119,14 +119,13 @@ describe("", () => {
     cy.get("#body").click().clear().type(`
     A tady to byl demonstrativní test.
 
-    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, 
-    však prozatím nejsem na úrovni kdy bych řešení mohl aplikovat v krátkém čase. 
-    Proto věřím, že jak jste mi i Vy řekli, zlepšování přichází časem a zkušenostmi.
+    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, však 
+    prozatím nejsem na úrovni kdy bych lepší řešení mohl aplikovat v krátkém čase. 
+    Proto věřím, že jak jste i Vy řekli, zlepšování přichází časem a zkušenostmi.
     Ještě jednou Vám děkuji a v případě budoucích příležitostí, budu rád 
-    za Vaše kontaktování.
-
-
-    S pozdravem Jiří Janeček `);
+    za Vaše kontaktování. 
+    
+    S pozdravem Jiří Janeček`);
 
     cy.get(".app-sidebar-notes").should("be.visible");
     cy.get(".app-sidebar-note").should("have.length", 2);
