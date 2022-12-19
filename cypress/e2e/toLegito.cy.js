@@ -19,7 +19,6 @@ describe("", () => {
     form_data.dataName("David Novák", "707606505", "daviduvpokus@seznam.cz");
     form_data.dataDate("2022-10-19", "2022-10-25");
     form_data.dataChoice("{upArrow}{upArrow}", "mango");
-    // form_data.dataChoice("{upArrow}{upArrow}{upArrow}", "Lime");
 
     cy.get(":nth-child(4) > .inputSpan > input").check();
     cy.get(":nth-child(5) > .inputSpan > input").check();
@@ -78,7 +77,7 @@ describe("", () => {
 
     cy.get(":nth-child(5) > .inputSpan > input").check();
 
-    // vertification
+    // verification
     // info
     cy.get(".sectionSixForm--inputLeft > :nth-child(1) > .allInput").should(
       "have.value",
@@ -119,13 +118,14 @@ describe("", () => {
     cy.contains("Druhý test").click();
     cy.get("#body").click().clear().type(`
     A tady to byl demonstrativní test.
-    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, však 
-    prozatím nejsem na úrovni kdy bych lepší řešení mohl aplikovat v krátkém čase. 
-    Proto věřím, že i jak Vy jste mi řekli, 
-    zlepšování přichází časem a zkušenostmi.
-    Ještě jednou Vám děkuji a v případě budoucích příležitostí, budu rád za Vaše 
-    kontaktování.
-    
+
+    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, však prozatím 
+    nejsem na úrovni kdy bych lepší řešení mohl aplikovat v krátkém čase. Proto věřím, 
+    že jak jste mi i Vy řekli, zlepšování přichází časem a zkušenostmi.
+    Ještě jednou Vám děkuji a v případě budoucích příležitostí, budu rád 
+    za Vaše kontaktování.
+
+
     S pozdravem Jiří Janeček `);
 
     cy.get(".app-sidebar-notes").should("be.visible");
