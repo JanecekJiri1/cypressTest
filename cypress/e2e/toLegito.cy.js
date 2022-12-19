@@ -28,7 +28,7 @@ describe("", () => {
       .type(
         `
     Ahoj, děkuji za čas který dáváte tomuto spuštění testu
-    - Prvni co se stalo je, že se načetla stránka a přepla se z angličtiny do češtiny
+    - První co se stalo je, že se načetla stránka a přepla se z angličtiny do češtiny
     - Poté se vyplnily informace ve formuláři a došlo k potvrzení odeslání
     - Mezitím došlo i k ověřování jestli konkrétní input má konkrétní hodnotu
     - Po odeslání se stránka obnoví a jde na další test, který bude chybový
@@ -119,9 +119,9 @@ describe("", () => {
     cy.get("#body").click().clear().type(`
     A tady to byl demonstrativní test.
 
-    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, však prozatím 
-    nejsem na úrovni kdy bych lepší řešení mohl aplikovat v krátkém čase. Proto věřím, 
-    že jak jste mi i Vy řekli, zlepšování přichází časem a zkušenostmi.
+    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, 
+    však prozatím nejsem na úrovni kdy bych řešení mohl aplikovat v krátkém čase. 
+    Proto věřím, že jak jste mi i Vy řekli, zlepšování přichází časem a zkušenostmi.
     Ještě jednou Vám děkuji a v případě budoucích příležitostí, budu rád 
     za Vaše kontaktování.
 
