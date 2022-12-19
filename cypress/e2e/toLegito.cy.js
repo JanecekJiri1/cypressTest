@@ -18,8 +18,8 @@ describe("", () => {
     // option 1
     form_data.dataName("David Novák", "707606505", "daviduvpokus@seznam.cz");
     form_data.dataDate("2022-10-19", "2022-10-25");
-    form_data.dataChoce("{upArrow}{upArrow}", "mango");
-    // form_data.dataChoce("{upArrow}{upArrow}{upArrow}", "Lime");
+    form_data.dataChoice("{upArrow}{upArrow}", "mango");
+    // form_data.dataChoice("{upArrow}{upArrow}{upArrow}", "Lime");
 
     cy.get(":nth-child(4) > .inputSpan > input").check();
     cy.get(":nth-child(5) > .inputSpan > input").check();
@@ -38,17 +38,7 @@ describe("", () => {
     - Vše se opět ověřuje jestli je ve stavu ve kterém chceme být
     `
       )
-      .wait(1000)
-      .type("...5")
-      .wait(1000)
-      .type("...4")
-      .wait(1000)
-      .type("...3")
-      .wait(1000)
-      .type("...2")
-      .wait(1000)
-      .type("...1")
-      .wait(1000);
+      .wait(3000);
 
     //verification
     // info
@@ -63,7 +53,7 @@ describe("", () => {
     // number
     verification_number.numberVerify();
 
-    // choce
+    // choice
     cy.get(".sectionSixForm--inputRightDouble--value > .allInput").should("have.value", "2");
     cy.get("select").should("have.value", "mango");
 
@@ -84,7 +74,7 @@ describe("", () => {
   it("fill the form option 2 false, wrong form of phone number", () => {
     form_data.dataName("Filip Novák", "7776 66555", "filipuvpokus@seznam.cz");
     form_data.dataDate("2022-11-11", "2022-11-14");
-    form_data.dataChoce("{upArrow}{upArrow}{upArrow}", "Lime");
+    form_data.dataChoice("{upArrow}{upArrow}{upArrow}", "Lime");
 
     cy.get(":nth-child(5) > .inputSpan > input").check();
 
@@ -129,11 +119,12 @@ describe("", () => {
     cy.contains("Druhý test").click();
     cy.get("#body").click().clear().type(`
     A tady to byl demonstrativní test.
-    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, však prozatím 
-    nejsem na úrovni kdy bych lepší řešení mohl aplikovat v krátkém čase. Proto věřím, 
-    že zlepšování přichází časem a zkušenostmi.
-    Ještě jednou Vám děkuji a v případě budoucích příležitostí, budu rád 
-    pokud mě budete kontaktovat.
+    Vím, že jsou věcí které by zde mohly být udělány lépe a komplexněji, však 
+    prozatím nejsem na úrovni kdy bych lepší řešení mohl aplikovat v krátkém čase. 
+    Proto věřím, že i jak Vy jste mi řekli, 
+    zlepšování přichází časem a zkušenostmi.
+    Ještě jednou Vám děkuji a v případě budoucích příležitostí, budu rád za Vaše 
+    kontaktování.
     
     S pozdravem Jiří Janeček `);
 
